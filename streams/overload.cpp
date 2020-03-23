@@ -6,18 +6,10 @@ public:
     explicit Complex(int real = 0, int imag = 0) : _real(real), _imag(imag)
     {}
 
-    friend std::ostream &operator<<(std::ostream &os, const Complex &c);
-
 private:
     int _real;
     int _imag;
 };
-
-std::ostream &operator<<(std::ostream &os, const Complex &c)
-{
-    os << c._real << "+" << c._imag << "i";
-    return os;
-}
 
 
 ////////////////////////////////////////////////////////////////////////////////

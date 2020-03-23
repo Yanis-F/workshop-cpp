@@ -21,16 +21,7 @@ void callMe(const std::string &str, int integer, double doubl)
 
 int main()
 {
-    std::stringstream ss{getString()};
 
-    std::string str;
-    int integer;
-    double doubl;
-
-    if (ss >> str && ss >> integer && ss >> doubl)
-        callMe(str, integer, doubl);
-    else
-        std::cerr << "Failed to read values from string" << std::endl;
 }
 
 /*

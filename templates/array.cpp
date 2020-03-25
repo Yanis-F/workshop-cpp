@@ -2,19 +2,6 @@
 #include <cassert>
 #include <string>
 
-template <typename T, int N>
-class Array
-{
-public:
-    T &operator[](int idx)
-    {
-        assert(idx < N);
-        return _data[idx];
-    }
-
-private:
-    T _data[N]{};
-};
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -32,3 +19,11 @@ int main()
 
     std::cout << s[0] << s[1] << s[2] << i[0] << std::endl;
 }
+
+/*
+Sans devoir modifier le main :
+Créer la classe template Array, qui prend en argument de template le type de
+donnée contenue dans l'array, et la taille de l'array.
+Overload l'operateur [] pour pouvoir accéder aux elements de l'array
+
+*/
